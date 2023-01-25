@@ -7,6 +7,13 @@ module.exports = {
       fontFamily: {
         burtons: "burtons",
       },
+      backgroundColor: {
+        primary: "#F1E7DC",
+        secondary: "#F5F0E8",
+      },
+      borderColor: {
+        title: "#535353",
+      },
     },
   },
   plugins: [],
