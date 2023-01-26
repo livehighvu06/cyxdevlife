@@ -12,9 +12,9 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
   return (
     <div className={darkMode ? "dark" : ""}>
-      <main className="bg-primary p-5 md:px-20 lg:px-30 dark:bg-gray-900 transition">
+      <main className="bg-primary p-5 md:px-20 lg:px-30 dark:bg-gray-800 transition">
         <header>
-          <nav className="max-w-3xl mx-auto p-2 md:p-5 mb-12 flex justify-between items-center rounded-md dark:bg-slate-800">
+          <nav className="max-w-3xl mx-auto p-2 md:p-5 mb-12 flex justify-between items-center rounded-md dark:bg-slate-800 dark:border dark:border-slate-700">
             <h1 className="text-xl font-bold dark:text-white">Chen Yi Xian</h1>
             <ul className="flex items-center gap-5">
               <li
@@ -49,11 +49,11 @@ function App() {
         </header>
         <article className="lg:max-w-3xl mx-auto">
           <section className="mb-12">
-            <div className="flex items-center bg-gradient-to-b from-teal-500 rounded-full w-56 h-56 mx-auto overflow-hidden mb-12">
+            <div className="mb-12 mx-auto w-40 h-40 md:w-56 md:h-56 flex items-center bg-gradient-to-b from-teal-500 rounded-full  overflow-hidden">
               <img
                 src={avatar}
                 alt="dev-ed-wave"
-                className="object-cover mx-auto"
+                className="object-cover mx-auto w-3/4 md:w-auto"
               />
             </div>
             <div className="dark:text-white">

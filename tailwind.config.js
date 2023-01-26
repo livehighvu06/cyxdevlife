@@ -9,6 +9,7 @@ module.exports = {
       },
       backgroundColor: {
         primary: "#F1E7DC",
+        dark: "#202023",
         secondary: "#F5F0E8",
       },
       borderColor: {
