@@ -6,15 +6,20 @@ import {
   AiFillLayout,
 } from "react-icons/ai";
 import avatar from "./images/avatar.png";
+import web1 from "./images/web1.png";
+import web2 from "./images/web2.png";
+import web3 from "./images/web3.png";
+import web4 from "./images/web4.png";
+import web5 from "./images/web5.png";
 import { useState } from "react";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   return (
     <div className={darkMode ? "dark" : ""}>
-      <main className="bg-primary p-5 md:px-20 lg:px-30 dark:bg-gray-800 transition">
+      <main className="bg-primary p-5 md:px-20 lg:px-30 dark:bg-gray-800 transition duration-500">
         <header>
-          <nav className="max-w-3xl mx-auto p-2 md:p-5 mb-12 flex justify-between items-center rounded-md dark:bg-slate-800 dark:border dark:border-slate-700">
+          <nav className="max-w-3xl mx-auto p-2 md:p-5 mb-12 flex justify-between items-center rounded-m">
             <h1 className="text-xl font-bold dark:text-white">Chen Yi Xian</h1>
             <ul className="flex items-center gap-5">
               <li
@@ -117,31 +122,23 @@ function App() {
             <h3 className="w-fit text-3xl font-bold pb-2 mb-6 border-b-4 border-title dark:text-white dark:border-slate-600">
               Skill
             </h3>
-            <div className="lg:flex gap-10 justify-center">
-              <div className="text-center shadow-lg p-10 rounded-xl mb-10 md:mb-0 lg:basis-1/2 bg-slate-50">
+            <div className="md:grid md:grid-cols-2 md:gap-10">
+              <div className="text-center shadow-lg px-5 py-10 md:p-10 rounded-xl mb-10 md:mb-0 bg-slate-50">
                 <AiFillLayout className="text-5xl mx-auto" />
                 <h4 className="text-lg font-medium pt-8 pb-2">Layout</h4>
                 <ul>
-                  <li className="text-gray-800 py-1">純手刻RWD Layout</li>
-                  <li className="text-gray-800 py-1">SCSS輔助切版</li>
-                  <li className="text-gray-800 py-1">
-                    Tailwind CSS 製作RWD頁面
-                  </li>
-                  <li className="text-gray-800 py-1">
-                    依PSD進行網頁切版 / 製作動畫效果
-                  </li>
+                  <li className="text-gray-800 py-1">CSS</li>
+                  <li className="text-gray-800 py-1">SCSS</li>
+                  <li className="text-gray-800 py-1">Tailwind CSS</li>
                 </ul>
               </div>
-              <div className="text-center shadow-lg p-10 rounded-xl mb-10 md:mb-0 lg:basis-1/2 bg-slate-50">
+              <div className="text-center shadow-lg px-5 py-10 md:p-10 rounded-xl mb-10 md:mb-0 bg-slate-50">
                 <BsCodeSlash className="text-5xl mx-auto" />
                 <h4 className="text-lg font-medium pt-8 pb-2">Frond-End</h4>
                 <ul>
                   <li className="text-gray-800 py-1">React</li>
-                  <li className="text-gray-800 py-1">React Redux </li>
                   <li className="text-gray-800 py-1">JavaScript ES6</li>
-                  <li className="text-gray-800 py-1">
-                    串接API ( 比較常用 Fetch）
-                  </li>
+                  <li className="text-gray-800 py-1">串接API</li>
                   <li className="text-gray-800 py-1">依需求使用 jQuery</li>
                 </ul>
               </div>
@@ -151,33 +148,118 @@ function App() {
             <h3 className="w-fit text-3xl font-bold pb-2 mb-6 border-b-4 border-title dark:text-white dark:border-slate-600">
               Portfolio
             </h3>
-            <div className="md:flex gap-10 justify-center">
-              <div className="text-center shadow-lg p-10 rounded-xl mb-10 md:mb-0 md:basis-1/2 bg-slate-50">
-                <AiFillLayout className="text-5xl mx-auto" />
-                <h4 className="text-lg font-medium pt-8 pb-2">Layout</h4>
-                <ul>
-                  <li className="text-gray-800 py-1">純手刻RWD Layout</li>
-                  <li className="text-gray-800 py-1">SCSS輔助切版</li>
-                  <li className="text-gray-800 py-1">
-                    Tailwind CSS 製作RWD頁面
-                  </li>
-                  <li className="text-gray-800 py-1">
-                    依PSD進行網頁切版 / 製作動畫效果
-                  </li>
-                </ul>
+            <div className="md:grid md:grid-cols-2 md:gap-10">
+              <div className="text-center shadow-lg px-5 py-10 md:p-10 rounded-xl mb-10 md:mb-0 bg-slate-50">
+                <a
+                  href="https://livehighvu06.github.io/pokedex/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex flex-col h-full"
+                >
+                  <img src={web5} className alt="" />
+                  <h4 className="text-lg font-medium pt-8 pb-2 md:h-28">
+                    寶可夢圖鑑
+                  </h4>
+                  <ul className="flex-1">
+                    <li className="text-gray-800 py-1">React Component</li>
+                    <li className="text-gray-800 py-1">React Query</li>
+                    <li className="text-gray-800 py-1">
+                      react-infinite-scroller
+                    </li>
+                  </ul>
+                  <h5 className="text-sm text-right mt-6 bg-teal-600 text-white w-fit ml-auto py-1 px-2 rounded-md font-bold">
+                    個人練習
+                  </h5>
+                </a>
               </div>
-              <div className="text-center shadow-lg p-10 rounded-xl mb-10 md:mb-0 md:basis-1/2 bg-slate-50">
-                <BsCodeSlash className="text-5xl mx-auto" />
-                <h4 className="text-lg font-medium pt-8 pb-2">Frond-End</h4>
-                <ul>
-                  <li className="text-gray-800 py-1">React</li>
-                  <li className="text-gray-800 py-1">React Redux </li>
-                  <li className="text-gray-800 py-1">JavaScript ES6</li>
-                  <li className="text-gray-800 py-1">
-                    串接API ( 比較常用 Fetch）
-                  </li>
-                  <li className="text-gray-800 py-1">依需求使用 jQuery</li>
-                </ul>
+              <div className="text-center shadow-lg px-5 py-10 md:p-10 rounded-xl mb-10 md:mb-0 bg-slate-50">
+                <a
+                  href="https://www.rakuten.ne.jp/gold/princeton/gamingkeyboard/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex flex-col h-full"
+                >
+                  <img src={web1} className alt="" />
+                  <h4 className="text-lg font-medium pt-8 pb-2 md:h-28">
+                    PRINECETON GAMING KEYBOARD
+                    <br />
+                    ゲーミングキーボード特集
+                  </h4>
+                  <ul className="flex-1">
+                    <li className="text-gray-800 py-1">純手刻RWD Layout</li>
+                    <li className="text-gray-800 py-1">SVG動畫效果</li>
+                  </ul>
+                  <h5 className="text-sm text-right mt-6 bg-teal-600 text-white w-fit ml-auto py-1 px-2 rounded-md font-bold">
+                    公司專案
+                  </h5>
+                </a>
+              </div>
+              <div className="text-center shadow-lg px-5 py-10 md:p-10 rounded-xl mb-10 md:mb-0 bg-slate-50">
+                <a
+                  href="https://www.rakuten.ne.jp/gold/princeton/speaker/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex flex-col h-full"
+                >
+                  <img src={web2} className alt="" />
+                  <h4 className="text-lg font-medium pt-8 pb-2 md:h-28">
+                    PRINECETON SPEAKER
+                    <br />
+                    スピーカー 特集
+                  </h4>
+                  <ul className="flex-1">
+                    <li className="text-gray-800 py-1">純手刻RWD Layout</li>
+                    <li className="text-gray-800 py-1">CSS動畫效果</li>
+                    <li className="text-gray-800 py-1">
+                      JavaScript手刻Scroll效果
+                    </li>
+                  </ul>
+                  <h5 className="text-sm text-right mt-6 bg-teal-600 text-white w-fit ml-auto py-1 px-2 rounded-md font-bold">
+                    公司專案
+                  </h5>
+                </a>
+              </div>
+              <div className="text-center shadow-lg px-5 py-10 md:p-10 rounded-xl mb-10 md:mb-0 bg-slate-50">
+                <a
+                  href="https://www.rakuten.ne.jp/gold/princeton/sdcard/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex flex-col h-full"
+                >
+                  <img src={web3} className alt="" />
+                  <h4 className="text-lg font-medium pt-8 pb-2 md:h-28">
+                    PRINECETON
+                    <br />
+                    SDカード 特集
+                  </h4>
+                  <ul className="flex-1">
+                    <li className="text-gray-800 py-1">純手刻RWD Layout</li>
+                  </ul>
+                  <h5 className="text-sm text-right mt-6 bg-teal-600 text-white w-fit ml-auto py-1 px-2 rounded-md font-bold">
+                    公司專案
+                  </h5>
+                </a>
+              </div>
+              <div className="text-center shadow-lg px-5 py-10 md:p-10 rounded-xl mb-10 md:mb-0 bg-slate-50">
+                <a
+                  href="https://www.rakuten.ne.jp/gold/princeton/iPhone14SeriesCase/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex flex-col h-full"
+                >
+                  <img src={web4} className alt="" />
+                  <h4 className="text-lg font-medium pt-8 pb-2 md:h-28">
+                    PRINECETON
+                    <br />
+                    iphone 特集
+                  </h4>
+                  <ul className="flex-1">
+                    <li className="text-gray-800 py-1">純手刻RWD Layout</li>
+                  </ul>
+                  <h5 className="text-sm text-right mt-6 bg-teal-600 text-white w-fit ml-auto py-1 px-2 rounded-md font-bold">
+                    公司專案
+                  </h5>
+                </a>
               </div>
             </div>
           </section>
