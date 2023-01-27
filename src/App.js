@@ -39,7 +39,7 @@ function App() {
                   />
                 )}
               </li>
-              <li>
+              {/* <li>
                 <a
                   href="https://www.yourator.co/r/95f2cf1d-993a-4756-a1b0-22c8b40619fa"
                   target="_blank"
@@ -48,7 +48,7 @@ function App() {
                 >
                   Resume
                 </a>
-              </li>
+              </li> */}
             </ul>
           </nav>
         </header>
@@ -119,11 +119,35 @@ function App() {
             </div>
           </section>
           <section className="p-5 mb-12 md:mb-20 dark:bg-slate-800 dark:rounded-md dark:border dark:border-slate-700">
+            <h3 className="w-fit text-3xl font-bold pb-2 mb-6 border-b-4  border-title dark:text-white dark:border-slate-600">
+              Bio
+            </h3>
+            <dl className="md:flex gap-5 dark:text-white">
+              <dt className="tracking-wide font-bold whitespace-nowrap mb-4 md:mr-6 md:mb-0 ">
+                2020.07 to Present
+              </dt>
+              <dd>
+                <span className="block mb-1 font-bold">前端網頁設計師</span>
+                <span className="block text-sm font-bold border-b border-black pb-2 mb-2 text-right text-gray-500 dark:border-slate-700 dark:text-white">
+                  博設技股份有限公司
+                </span>
+                <ol className="leading-7 list-disc pl-4">
+                  <li>負責客戶在日本樂天市場、Paypay等電商活動網頁製作。</li>
+                  <li>處理網頁跨瀏覽器間相容問題</li>
+                  <li>
+                    運用Google App Script / Python 協助行銷企劃完成各種Routine
+                    (如製作EDM、大量更新網頁資訊等)，提升90%工作效率。
+                  </li>
+                </ol>
+              </dd>
+            </dl>
+          </section>
+          <section className="p-5 mb-12 md:mb-20 dark:bg-slate-800 dark:rounded-md dark:border dark:border-slate-700">
             <h3 className="w-fit text-3xl font-bold pb-2 mb-6 border-b-4 border-title dark:text-white dark:border-slate-600">
               Skill
             </h3>
             <div className="md:grid md:grid-cols-2 md:gap-10">
-              <div className="text-center shadow-lg px-5 py-10 md:p-10 rounded-xl mb-10 md:mb-0 bg-slate-50">
+              <div className="text-center shadow-lg px-5 py-10 md:p-10 rounded-lg mb-10 md:mb-0 bg-slate-50">
                 <AiFillLayout className="text-5xl mx-auto" />
                 <h4 className="text-lg font-medium pt-8 pb-2">Layout</h4>
                 <ul>
@@ -132,7 +156,7 @@ function App() {
                   <li className="text-gray-800 py-1">Tailwind CSS</li>
                 </ul>
               </div>
-              <div className="text-center shadow-lg px-5 py-10 md:p-10 rounded-xl mb-10 md:mb-0 bg-slate-50">
+              <div className="text-center shadow-lg px-5 py-10 md:p-10 rounded-lg mb-10 md:mb-0 bg-slate-50">
                 <BsCodeSlash className="text-5xl mx-auto" />
                 <h4 className="text-lg font-medium pt-8 pb-2">Frond-End</h4>
                 <ul>
@@ -149,7 +173,7 @@ function App() {
               Portfolio
             </h3>
             <div className="md:grid md:grid-cols-2 md:gap-10">
-              <div className="text-center shadow-lg px-5 py-10 md:p-10 rounded-xl mb-10 md:mb-0 bg-slate-50">
+              <div className="text-center shadow-lg px-5 py-10 md:p-10 rounded-lg mb-10 md:mb-0 bg-slate-50">
                 <a
                   href="https://livehighvu06.github.io/pokedex/"
                   target="_blank"
@@ -157,7 +181,7 @@ function App() {
                   className="flex flex-col h-full"
                 >
                   <img src={web5} className alt="" />
-                  <h4 className="text-lg font-medium pt-8 pb-2 md:h-28">
+                  <h4 className="text-lg font-medium pt-8 pb-2 lg:h-32">
                     寶可夢圖鑑
                   </h4>
                   <ul className="flex-1">
@@ -166,13 +190,17 @@ function App() {
                     <li className="text-gray-800 py-1">
                       react-infinite-scroller
                     </li>
+                    <li className="text-gray-800 py-1">Tailwind CSS</li>
+                    <li className="text-gray-800 py-1">
+                      The RESTful Pokémon API
+                    </li>
                   </ul>
                   <h5 className="text-sm text-right mt-6 bg-teal-600 text-white w-fit ml-auto py-1 px-2 rounded-md font-bold">
                     個人練習
                   </h5>
                 </a>
               </div>
-              <div className="text-center shadow-lg px-5 py-10 md:p-10 rounded-xl mb-10 md:mb-0 bg-slate-50">
+              <div className="text-center shadow-lg px-5 py-10 md:p-10 rounded-lg mb-10 md:mb-0 bg-slate-50">
                 <a
                   href="https://www.rakuten.ne.jp/gold/princeton/gamingkeyboard/"
                   target="_blank"
@@ -180,7 +208,7 @@ function App() {
                   className="flex flex-col h-full"
                 >
                   <img src={web1} className alt="" />
-                  <h4 className="text-lg font-medium pt-8 pb-2 md:h-28">
+                  <h4 className="text-lg font-medium pt-8 pb-2 lg:h-32">
                     PRINECETON GAMING KEYBOARD
                     <br />
                     ゲーミングキーボード特集
@@ -194,7 +222,7 @@ function App() {
                   </h5>
                 </a>
               </div>
-              <div className="text-center shadow-lg px-5 py-10 md:p-10 rounded-xl mb-10 md:mb-0 bg-slate-50">
+              <div className="text-center shadow-lg px-5 py-10 md:p-10 rounded-lg mb-10 md:mb-0 bg-slate-50">
                 <a
                   href="https://www.rakuten.ne.jp/gold/princeton/speaker/"
                   target="_blank"
@@ -202,7 +230,7 @@ function App() {
                   className="flex flex-col h-full"
                 >
                   <img src={web2} className alt="" />
-                  <h4 className="text-lg font-medium pt-8 pb-2 md:h-28">
+                  <h4 className="text-lg font-medium pt-8 pb-2 lg:h-32">
                     PRINECETON SPEAKER
                     <br />
                     スピーカー 特集
@@ -219,7 +247,7 @@ function App() {
                   </h5>
                 </a>
               </div>
-              <div className="text-center shadow-lg px-5 py-10 md:p-10 rounded-xl mb-10 md:mb-0 bg-slate-50">
+              <div className="text-center shadow-lg px-5 py-10 md:p-10 rounded-lg mb-10 md:mb-0 bg-slate-50">
                 <a
                   href="https://www.rakuten.ne.jp/gold/princeton/sdcard/"
                   target="_blank"
@@ -227,7 +255,7 @@ function App() {
                   className="flex flex-col h-full"
                 >
                   <img src={web3} className alt="" />
-                  <h4 className="text-lg font-medium pt-8 pb-2 md:h-28">
+                  <h4 className="text-lg font-medium pt-8 pb-2 lg:h-32">
                     PRINECETON
                     <br />
                     SDカード 特集
@@ -240,7 +268,7 @@ function App() {
                   </h5>
                 </a>
               </div>
-              <div className="text-center shadow-lg px-5 py-10 md:p-10 rounded-xl mb-10 md:mb-0 bg-slate-50">
+              <div className="text-center shadow-lg px-5 py-10 md:p-10 rounded-lg mb-10 md:mb-0 bg-slate-50">
                 <a
                   href="https://www.rakuten.ne.jp/gold/princeton/iPhone14SeriesCase/"
                   target="_blank"
@@ -248,7 +276,7 @@ function App() {
                   className="flex flex-col h-full"
                 >
                   <img src={web4} className alt="" />
-                  <h4 className="text-lg font-medium pt-8 pb-2 md:h-28">
+                  <h4 className="text-lg font-medium pt-8 pb-2 lg:h-32">
                     PRINECETON
                     <br />
                     iphone 特集
@@ -264,8 +292,8 @@ function App() {
             </div>
           </section>
         </article>
-        <footer className="text-center text-slate-400">
-          &copy;{new Date().getFullYear()} Eddie Chen All rights reserved
+        <footer className="text-sm text-center text-slate-400">
+          &copy; {new Date().getFullYear()} Eddie Chen All rights reserved
         </footer>
       </main>
     </div>
