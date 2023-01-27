@@ -136,7 +136,7 @@ function App() {
                   <li>處理網頁跨瀏覽器間相容問題</li>
                   <li>
                     運用Google App Script / Python 協助行銷企劃完成各種Routine
-                    (如製作EDM、大量更新網頁資訊等)，提升90%工作效率。
+                    (如製作EDM、大量更新網頁資訊、打掃分配等)，提升90%工作效率。
                   </li>
                 </ol>
               </dd>
