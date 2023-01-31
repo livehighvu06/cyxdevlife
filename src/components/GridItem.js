@@ -1,8 +1,6 @@
-import React, { useRef } from "react";
+import React from "react";
 
 function GridItem({ children, list, title, link, remark }) {
-  const targetRef = useRef(null);
-  console.log(targetRef.current);
   return (
     <div className="text-center shadow-lg px-5 py-10 md:p-10 rounded-lg mb-10 md:mb-0 bg-slate-50">
       {link ? (
@@ -13,9 +11,7 @@ function GridItem({ children, list, title, link, remark }) {
           className="flex flex-col h-full"
         >
           {children}
-          <h4 className="text-lg font-medium pt-8 pb-2" ref={targetRef}>
-            {title}
-          </h4>
+          <h4 className="text-lg font-medium pt-8 pb-2">{title}</h4>
           <ul className="flex-1">
             {list.map((item) => (
               <li key={item} className="text-gray-800 py-1">
