@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "../context/ThemeProvider";
 import { BsSun, BsFillMoonStarsFill } from "react-icons/bs";
-function Header({ darkMode, setDarkMode }) {
+function Header() {
+  const { theme, toggleTheme } = useContext(ThemeContext);
+  const darkMode = theme === "dark";
   return (
     <header>
       <nav className="max-w-3xl mx-auto p-2 md:p-5 mb-12 flex justify-between items-center rounded-m">
@@ -14,12 +17,12 @@ function Header({ darkMode, setDarkMode }) {
             {darkMode ? (
               <BsSun
                 className="cursor-pointer text-2xl text-white"
-                onClick={() => setDarkMode(!darkMode)}
+                onClick={toggleTheme}
               />
             ) : (
               <BsFillMoonStarsFill
                 className="cursor-pointer text-2xl"
-                onClick={() => setDarkMode(!darkMode)}
+                onClick={toggleTheme}
               />
             )}
           </li>

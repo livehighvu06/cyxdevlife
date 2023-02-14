@@ -1,12 +1,14 @@
-import { useState } from "react";
+// import { useContext } from "react";
 import { BsCodeSlash } from "react-icons/bs";
 import { AiFillLayout } from "react-icons/ai";
+// import { ThemeContext } from "./context/ThemeProvider";
 
 import web1 from "./images/web1.png";
 import web2 from "./images/web2.png";
 import web3 from "./images/web3.png";
 import web4 from "./images/web4.png";
 import web5 from "./images/web5.png";
+import Background from "./components/Background";
 import Header from "./components/Header";
 import Section from "./components/Section";
 import Grid from "./components/Grid";
@@ -18,11 +20,10 @@ import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
   return (
-    <div className={darkMode ? "dark" : ""}>
-      <main className="bg-primary p-5 md:px-20 lg:px-30 dark:bg-gray-800 transition duration-500">
-        <Header setDarkMode={setDarkMode} darkMode={darkMode} />
+    <Background>
+      <main className="p-5 md:px-20 lg:px-30 ">
+        <Header />
         <Container>
           <Section>
             <Hero />
@@ -147,7 +148,7 @@ function App() {
         </Container>
         <Footer />
       </main>
-    </div>
+    </Background>
   );
 }
 
