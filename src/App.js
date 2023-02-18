@@ -1,13 +1,13 @@
-// import { useContext } from "react";
 import { BsCodeSlash } from "react-icons/bs";
 import { AiFillLayout } from "react-icons/ai";
-// import { ThemeContext } from "./context/ThemeProvider";
 
 import web1 from "./images/web1.png";
 import web2 from "./images/web2.png";
 import web3 from "./images/web3.png";
 import web4 from "./images/web4.png";
 import web5 from "./images/web5.png";
+import web6 from "./images/web6.png";
+import web7 from "./images/web7.png";
 import Background from "./components/Background";
 import Header from "./components/Header";
 import Section from "./components/Section";
@@ -36,7 +36,7 @@ function App() {
           >
             <p className="py-2 leading-8 text-gray-800 dark:text-white">
               <span className="block font-bold">【動機】</span>
-              過去因家庭因素，工作必須很彈性，鮮少接觸正職工作，而家庭事務告一段落後，2019年因朋友介紹而開始接觸網頁設計，隨後定了轉為前端的職涯方向，一路上跌跌撞撞，利用空閒時間自主學習，遇到難題時轉換不同角度來思考，慢慢解決問題，最後在2020年轉職為前端工程師。
+              過去因家庭因素暫別職場，而家庭事務告一段落後，2019年因朋友介紹而開始接觸網頁設計，後來發現自己對前端技術充滿熱情，因此選擇轉向前端職業方向。在轉職的過程中，我遇到了各種挑戰，但我堅持不懈，透過自主學習和思考，逐步提升自己的技能和能力。最終在2020年成功轉職成為前端工程師。
             </p>
             <p className="py-2 leading-8 text-gray-800 dark:text-white">
               <span className="block font-bold">【轉職過後】</span>
@@ -82,10 +82,17 @@ function App() {
           >
             <Grid>
               <GridItem
+                title="個人網站"
+                link="https://livehighvu06.github.io/cyxdevlife/"
+                list={["React Component", "Tailwind CSS", "Dark Mode"]}
+                remark="個人練習"
+              >
+                <img src={web7} alt="" />
+              </GridItem>
+              <GridItem
                 title="寶可夢圖鑑"
                 link="https://livehighvu06.github.io/pokedex/"
                 list={[
-                  "React Component",
                   "React Query",
                   "react-infinite-scroller",
                   "Tailwind CSS",
@@ -94,6 +101,19 @@ function App() {
                 remark="個人練習"
               >
                 <img src={web5} alt="" />
+              </GridItem>
+              <GridItem
+                title="ECSHOP"
+                link="https://livehighvu06.github.io/react-ecshop/"
+                list={[
+                  "React Component",
+                  "Frame-Motion",
+                  "Tailwind CSS",
+                  "Fake Store API",
+                ]}
+                remark="個人練習"
+              >
+                <img src={web6} alt="" />
               </GridItem>
               <GridItem
                 title={[

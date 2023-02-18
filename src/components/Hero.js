@@ -3,6 +3,7 @@ import {
   AiFillCodepenCircle,
   AiFillLinkedin,
   AiFillGithub,
+  AiFillCodeSandboxCircle,
 } from "react-icons/ai";
 import avatar from "../images/avatar.png";
 function Hero() {
@@ -36,22 +37,33 @@ function Hero() {
             href="https://codepen.io/livehighvu06"
             target="_blank"
             rel="noreferrer"
+            title="Codepen"
           >
             <AiFillCodepenCircle />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/chenyixian/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <AiFillLinkedin />
           </a>
           <a
             href="https://github.com/livehighvu06"
             target="_blank"
             rel="noreferrer"
+            title="Github"
           >
             <AiFillGithub />
+          </a>
+          <a
+            href="https://codesandbox.io/u/livehighvu06"
+            target="_blank"
+            rel="noreferrer"
+            title="CodeSandbox"
+          >
+            <AiFillCodeSandboxCircle />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/chenyixian/"
+            target="_blank"
+            rel="noreferrer"
+            title="Linkedin"
+          >
+            <AiFillLinkedin />
           </a>
         </div>
       </div>

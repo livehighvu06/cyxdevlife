@@ -12,11 +12,14 @@ function WKX() {
           博設技股份有限公司
         </span>
         <ol className="leading-7 list-disc pl-4">
-          <li>負責客戶在日本樂天市場、Paypay等電商活動網頁製作。</li>
-          <li>處理網頁跨瀏覽器間相容問題</li>
           <li>
-            運用Google App Script / Python 協助行銷企劃完成各種Routine
-            (如製作EDM、大量更新網頁資訊、打掃分配等)，提升90%工作效率。
+            負責開發客戶的網站，包括日本樂天市場和 Paypay
+            等知名平台的活動網頁。致力於提高用戶體驗，並兼顧網站的跨瀏覽器相容性，以確保每位用戶都能順暢地瀏覽網站。
+          </li>
+          <li>
+            使用 Google App Script 和 Python
+            等技術協助行銷團隊自動化各種例行工作，例如製作
+            EDM、大量更新網頁資訊和分配工作。這樣的自動化工作流程大大提高了90%的工作效率。
           </li>
         </ol>
       </dd>
