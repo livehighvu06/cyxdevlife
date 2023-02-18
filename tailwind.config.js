@@ -13,7 +13,7 @@ module.exports = {
         secondary: "#F5F0E8",
       },
       borderColor: {
-        title: "#535353",
+        title: "#B5495B",
       },
     },
   },
