@@ -1,11 +1,8 @@
 # 個人網站
-[網站連結](https://livehighvu06.github.io/cyxdevlife/)
+<div align="center">
+  <img src="https://i.imgur.com/3Rtvyuf.png" width="650">
+</div>
 
-what i use :
 
-```
-React
-Tailwindcss
-```
-
-配色沿用2020練習時製作的[個人網站](https://livehighvu06.github.io/chenyixian/)
+## 説明
+嘗試用`React`、`Tailwindcss`重新架構，配色沿用2020練習時製作的[個人網站](https://livehighvu06.github.io/chenyixian/)
