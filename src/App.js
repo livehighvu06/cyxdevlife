@@ -8,6 +8,7 @@ import web4 from "./images/web4.png";
 import web5 from "./images/web5.png";
 import web6 from "./images/web6.png";
 import web7 from "./images/web7.png";
+import web8 from "./images/web8.png";
 import Background from "./components/Background";
 import Header from "./components/Header";
 import Section from "./components/Section";
@@ -84,6 +85,7 @@ function App() {
               <GridItem
                 title="個人網站"
                 link="https://livehighvu06.github.io/cyxdevlife/"
+                github="https://github.com/livehighvu06/cyxdevlife/"
                 list={["React Component", "Tailwind CSS", "Dark Mode"]}
                 remark="個人練習"
               >
@@ -92,6 +94,7 @@ function App() {
               <GridItem
                 title="寶可夢圖鑑"
                 link="https://livehighvu06.github.io/pokedex/"
+                github="https://github.com/livehighvu06/pokedex/"
                 list={[
                   "React Query",
                   "react-infinite-scroller",
@@ -103,8 +106,18 @@ function App() {
                 <img src={web5} alt="" />
               </GridItem>
               <GridItem
+                title="Movie Finder"
+                link="https://livehighvu06.github.io/movie-finder/"
+                github="https://github.com/livehighvu06/movie-finder/"
+                list={["React Component", "Custom Hook", "OMDb API "]}
+                remark="個人練習"
+              >
+                <img src={web8} alt="" />
+              </GridItem>
+              <GridItem
                 title="ECSHOP"
                 link="https://livehighvu06.github.io/react-ecshop/"
+                github="https://github.com/livehighvu06/react-ecshop"
                 list={[
                   "React Component",
                   "Frame-Motion",
