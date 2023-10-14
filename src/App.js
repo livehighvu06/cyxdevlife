@@ -20,6 +20,31 @@ import Footer from "./components/Footer";
 
 import Hero from "./components/Hero";
 
+const bioList = [
+  {
+    id: 1,
+    title: "前端工程師",
+    company: "禾宥有限公司",
+    description: [
+      "使用React框架構建官方網站，負責元件開發和網頁功能實現。",
+      "使用Tailwind CSS編寫可重複使用的UI樣式，實現響應式設計和快速開發。",
+      "與後端團隊密切合作，進行API串接，確保前端與後端的數據流暢交互。",
+      "與區塊鏈工程師合作，進行ABI串接，以確保智能合約在網站中的正確使用。",
+    ],
+    time: " 2023.03 to 2023.08",
+  },
+  {
+    id: 2,
+    title: "前端網頁設計師",
+    company: "博設技股份有限公司",
+    description: [
+      "負責開發客戶的網站，包括日本樂天市場和 Paypay，等知名平台的活動網頁。致力於提高用戶體驗，並兼顧網站的跨瀏覽器相容性，以確保每位用戶都能順暢地瀏覽網站。",
+      " 使用 Google App Script 和 Python，等技術協助行銷團隊自動化各種例行工作，例如製作，EDM、大量更新網頁資訊和分配工作。這樣的自動化工作流程大大提高了90%的工作效率。",
+    ],
+    time: " 2020.07 to 2023.02",
+  },
+];
+
 function App() {
   return (
     <Background>
@@ -50,7 +75,17 @@ function App() {
             }
             title="Bio"
           >
-            <WKX />
+            {bioList.map((bio) => {
+              return (
+                <WKX
+                  key={bio.id}
+                  title={bio.title}
+                  company={bio.company}
+                  description={bio.description}
+                  time={bio.time}
+                />
+              );
+            })}
           </Section>
           <Section
             custom={
