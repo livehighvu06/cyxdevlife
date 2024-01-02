@@ -9,6 +9,7 @@ import web5 from "./images/web5.png";
 import web6 from "./images/web6.png";
 import web7 from "./images/web7.png";
 import web8 from "./images/web8.png";
+import web9 from "./images/web9.png";
 import Background from "./components/Background";
 import Header from "./components/Header";
 import Section from "./components/Section";
@@ -26,10 +27,10 @@ const bioList = [
     title: "前端工程師",
     company: "禾宥有限公司",
     description: [
-      "使用React框架構建官方網站，負責元件開發和網頁功能實現。",
-      "使用Tailwind CSS編寫可重複使用的UI樣式，實現響應式設計和快速開發。",
-      "與後端團隊密切合作，進行API串接，確保前端與後端的數據流暢交互。",
-      "與區塊鏈工程師合作，進行ABI串接，以確保智能合約在網站中的正確使用。",
+      "負責部分頁面撰寫、維護，使用Next.js進行開發",
+      "多語系部分使用next-i18next",
+      "UI使用Tailwind CSS",
+      "圖表製作使用React Charts",
     ],
     time: " 2023.03 to 2023.08",
   },
@@ -38,8 +39,9 @@ const bioList = [
     title: "前端網頁設計師",
     company: "博設技股份有限公司",
     description: [
-      "負責開發客戶的網站，包括日本樂天市場和 Paypay，等知名平台的活動網頁。致力於提高用戶體驗，並兼顧網站的跨瀏覽器相容性，以確保每位用戶都能順暢地瀏覽網站。",
-      " 使用 Google App Script 和 Python，等技術協助行銷團隊自動化各種例行工作，例如製作，EDM、大量更新網頁資訊和分配工作。這樣的自動化工作流程大大提高了90%的工作效率。",
+      "主要使用HTML、SCSS、JavaScript(或 jQuery)來製作電商活動網頁，部分大型網站則會用BootStrap來進行切版，動畫效果主要為手刻。",
+      "協助行銷團隊將部份Routine進行自動化，像是EDM是純HTML撰寫，再放到樂天CMS進行發送，那EDM版面幾乎一樣，當時使用Google Apps Script撰寫自動化工具，行銷團隊只需將資料貼到Google Sheet上，就會自動輸出為HTML檔案，大幅減少他們工作時間。",
+      "困擾行銷團隊的還有大量的商品資訊，他們必須在樂天網站上手動整理，為此我學了Python，協助他們快速將所需的資料抓取下來，並匯出excel檔案。",
     ],
     time: " 2020.07 to 2023.02",
   },
@@ -117,6 +119,14 @@ function App() {
             title="Portfolio"
           >
             <Grid>
+              <GridItem
+                title="官方網站"
+                link="https://www.riseofelves.com/zh-TW"
+                list={["Next.js", "Tailwind CSS"]}
+                remark="公司專案"
+              >
+                <img src={web9} alt="" />
+              </GridItem>
               <GridItem
                 title="個人網站"
                 link="https://livehighvu06.github.io/cyxdevlife/"
