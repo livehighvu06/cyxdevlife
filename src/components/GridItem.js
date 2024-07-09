@@ -9,7 +9,7 @@ function GridItemImage({ src }) {
 // 標題顯示組件
 function GridItemTitle({ title }) {
   return (
-    <h4 className="text-xl font-bold py-2">
+    <h4 className="text-xl font-bold mb-4">
       {Array.isArray(title)
         ? title.map((t, i) => <span key={i}>{t}</span>)
         : title}
@@ -25,7 +25,7 @@ function GridItemList({ list }) {
         {list.map((item, index) => (
           <li
             key={index}
-            className="text-sm text-gray-800 bg-gray-200 rounded-md px-2 py-1"
+            className="text-sm text-left text-gray-800 bg-gray-200 rounded-md px-2 py-1"
           >
             {item}
           </li>
@@ -75,7 +75,7 @@ function GridItem({
 }) {
   return (
     <div className="text-center shadow-lg px-5 py-10 md:p-8 rounded-lg mb-10 md:mb-0 bg-slate-50">
-      {/* {Icon && <Icon className="text-5xl mb-4" />} */}
+      {/* {Icon && <Icon className="text-5xl mb-4 mx-auto" />} */}
       <div className="flex flex-col h-full">
         <GridItemTitle title={title} />
         {imgSrc && <GridItemImage src={imgSrc} />}
