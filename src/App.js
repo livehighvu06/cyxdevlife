@@ -1,18 +1,3 @@
-// Import React icons
-import { BsCodeSlash } from "react-icons/bs";
-import { AiFillLayout } from "react-icons/ai";
-
-// Import images
-import web1 from "./images/web1.png";
-import web2 from "./images/web2.png";
-import web3 from "./images/web3.png";
-import web4 from "./images/web4.png";
-import web5 from "./images/web5.png";
-import web6 from "./images/web6.png";
-import web7 from "./images/web7.png";
-import web8 from "./images/web8.png";
-import web9 from "./images/web9.png";
-
 // Import components
 import Background from "./components/Background";
 import Header from "./components/Header";
@@ -25,7 +10,9 @@ import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 
 // Import bio list data
-import { bioList } from "./data/biolist";
+import { bioList } from "./data/data";
+import { skill } from "./data/data";
+import { portfolio } from "./data/data";
 
 const App = () => (
   <Background>
@@ -67,15 +54,14 @@ const App = () => (
           title="Skill"
         >
           <Grid>
-            <GridItem title="Layout" list={["CSS", "SCSS", "Tailwind CSS"]}>
-              <AiFillLayout className="text-5xl mx-auto" />
-            </GridItem>
-            <GridItem
-              title="Front-End"
-              list={["React", "JavaScript ES6", "串接API", "依需求使用 jQuery"]}
-            >
-              <BsCodeSlash className="text-5xl mx-auto" />
-            </GridItem>
+            {skill.map((item, index) => (
+              <GridItem
+                key={index}
+                title={item.title}
+                list={item.list}
+                icon={item.icon}
+              />
+            ))}
           </Grid>
         </Section>
         <Section
@@ -83,108 +69,17 @@ const App = () => (
           title="Portfolio"
         >
           <Grid>
-            <GridItem
-              title="官方網站"
-              link="https://www.riseofelves.com/zh-TW"
-              list={["Next.js", "Tailwind CSS"]}
-              remark="公司專案"
-            >
-              <img src={web9} alt="官方網站" />
-            </GridItem>
-            <GridItem
-              title="個人網站"
-              link="https://livehighvu06.github.io/cyxdevlife/"
-              github="https://github.com/livehighvu06/cyxdevlife/"
-              list={["React Component", "Tailwind CSS", "Dark Mode"]}
-              remark="個人練習"
-            >
-              <img src={web7} alt="個人網站" />
-            </GridItem>
-            <GridItem
-              title="寶可夢圖鑑"
-              link="https://livehighvu06.github.io/pokedex/"
-              github="https://github.com/livehighvu06/pokedex/"
-              list={[
-                "React Query",
-                "react-infinite-scroller",
-                "Tailwind CSS",
-                "The RESTful Pokémon API",
-              ]}
-              remark="個人練習"
-            >
-              <img src={web5} alt="寶可夢圖鑑" />
-            </GridItem>
-            <GridItem
-              title="Movie Finder"
-              link="https://livehighvu06.github.io/movie-finder/"
-              github="https://github.com/livehighvu06/movie-finder/"
-              list={["React Component", "Custom Hook", "OMDb API"]}
-              remark="個人練習"
-            >
-              <img src={web8} alt="Movie Finder" />
-            </GridItem>
-            <GridItem
-              title="ECSHOP"
-              link="https://livehighvu06.github.io/react-ecshop/"
-              github="https://github.com/livehighvu06/react-ecshop"
-              list={[
-                "React Component",
-                "Frame-Motion",
-                "Tailwind CSS",
-                "Fake Store API",
-              ]}
-              remark="個人練習"
-            >
-              <img src={web6} alt="ECSHOP" />
-            </GridItem>
-            <GridItem
-              title={[
-                "PRINECETON",
-                <br />,
-                "GAMING KEYBOARD ",
-                <br />,
-                "ゲーミングキーボード特集",
-              ]}
-              link="https://www.rakuten.ne.jp/gold/princeton/gamingkeyboard/"
-              list={["純手刻RWD Layout", "SVG動畫效果"]}
-              remark="公司專案"
-            >
-              <img src={web1} alt="PRINECETON GAMING KEYBOARD" />
-            </GridItem>
-            <GridItem
-              title={[
-                "PRINECETON",
-                <br />,
-                "SPEAKER",
-                <br />,
-                "スピーカー 特集",
-              ]}
-              link="https://www.rakuten.ne.jp/gold/princeton/speaker/"
-              list={[
-                "純手刻RWD Layout",
-                "CSS動畫效果",
-                "JavaScript手刻Scroll效果",
-              ]}
-              remark="公司專案"
-            >
-              <img src={web2} alt="PRINECETON SPEAKER" />
-            </GridItem>
-            <GridItem
-              title={["PRINECETON", <br />, "SDカード 特集"]}
-              link="https://www.rakuten.ne.jp/gold/princeton/sdcard/"
-              list={["純手刻RWD Layout"]}
-              remark="公司專案"
-            >
-              <img src={web3} alt="PRINECETON SD卡" />
-            </GridItem>
-            <GridItem
-              title={["PRINECETON", <br />, "iphone 特集"]}
-              link="https://www.rakuten.ne.jp/gold/princeton/iPhone14SeriesCase/"
-              list={["純手刻RWD Layout"]}
-              remark="公司專案"
-            >
-              <img src={web4} alt="PRINECETON iphone" />
-            </GridItem>
+            {portfolio.map((item, index) => (
+              <GridItem
+                key={index}
+                title={item.title}
+                link={item.link}
+                github={item.github}
+                list={item.list}
+                remark={item.remark}
+                imgSrc={item.imgSrc}
+              />
+            ))}
           </Grid>
         </Section>
       </Container>
