@@ -82,6 +82,18 @@ export const skill = [
 
 export const portfolio = [
   {
+    title: "Weather App 簡潔文字版",
+    link: "https://livehighvu06.github.io/weather-app/",
+    list: ["React", "React Query", "Zustand"],
+    remark: "個人練習",
+  },
+  {
+    title: "HOYOLAB自動簽到腳本",
+    link: "https://github.com/livehighvu06/hoyolab_autosignin",
+    list: ["JavaScript", "Google Apps Script"],
+    remark: "小工具",
+  },
+  {
     title: "官方網站",
     link: "https://www.riseofelves.com/zh-TW",
     list: ["Next.js", "Tailwind CSS"],
