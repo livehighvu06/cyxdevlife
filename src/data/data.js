@@ -54,14 +54,29 @@ export const about = [
 
 export const skill = [
   {
-    title: "Layout",
-    list: ["CSS", "SCSS", "Tailwind CSS"],
+    title: "Web Layout",
+    list: ["純手刻", "SCSS", "Tailwind CSS"],
     icon: AiFillLayout,
   },
   {
-    title: "Front-End",
-    list: ["React", "JavaScript ES6", "API Integration", "jQuery as needed"],
+    title: "Front End",
+    list: ["React", "Zustand", "JavaScript ES6", "串接API", "jQuery"],
     icon: BsCodeSlash,
+  },
+  {
+    title: "Back End",
+    list: ["Node.js", "Python"],
+    icon: null,
+  },
+  {
+    title: "Others",
+    list: [
+      "Google Apps Script - 自動化流程",
+      "Git",
+      "Firebase",
+      "Figma / Photoshop",
+    ],
+    icon: null,
   },
 ];
 
