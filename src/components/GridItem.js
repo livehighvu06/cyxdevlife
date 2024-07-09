@@ -38,7 +38,7 @@ function GridItemList({ list }) {
 // 連結顯示組件
 function GridItemLinks({ link, github, remark }) {
   return (
-    <div className="flex border-0 border-t-2 pt-2 mt-4 w-full">
+    <div className="flex border-0 border-t-2 pt-4 mt-4 w-full">
       {link && (
         <div className="mr-4">
           <a href={link} target="_blank" rel="noreferrer">
