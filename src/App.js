@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Section from "./components/Section";
 import Grid from "./components/Grid";
 import GridItem from "./components/GridItem";
-import BioItem from "./components/BioIem";
+import BioItem from "./components/BioItem";
 import Container from "./components/Container";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
