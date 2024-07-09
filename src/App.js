@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Section from "./components/Section";
 import Grid from "./components/Grid";
 import GridItem from "./components/GridItem";
+import AboutItem from "./components/AboutItem";
 import BioItem from "./components/BioItem";
 import Container from "./components/Container";
 import Footer from "./components/Footer";
@@ -28,13 +29,7 @@ const App = () => (
           title="About"
         >
           {about.map((item, index) => (
-            <p
-              key={index}
-              className="py-2 leading-8 text-gray-800 dark:text-white"
-            >
-              <span className="block font-bold">【{item.title}】</span>
-              {item.content}
-            </p>
+            <AboutItem key={index} title={item.title} content={item.content} />
           ))}
         </Section>
         <Section
