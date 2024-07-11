@@ -1,3 +1,5 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 // Import components
 import Background from "./components/Background";
 import Header from "./components/Header";
@@ -100,19 +102,23 @@ const Portfolio = () => {
 };
 
 const App = () => (
-  <Background>
-    <main className="p-5 md:px-20 lg:px-30">
-      <Header />
-      <Container>
-        <Main />
-        <About />
-        <Bio />
-        <Skill />
-        <Portfolio />
-      </Container>
-      <Footer />
-    </main>
-  </Background>
+  <Router>
+    <Background>
+      <main className="p-5 md:px-20 lg:px-30">
+        <Header />
+        <Container>
+          <Routes>
+            <Route path="/cyxdevlife" element={<Main />} />
+            <Route path="/cyxdevlife/about" element={<About />} />
+            <Route path="/cyxdevlife/bio" element={<Bio />} />
+            <Route path="/cyxdevlife/skill" element={<Skill />} />
+            <Route path="/cyxdevlife/portfolio" element={<Portfolio />} />
+          </Routes>
+        </Container>
+        <Footer />
+      </main>
+    </Background>
+  </Router>
 );
 
 export default App;
