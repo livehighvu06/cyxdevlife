@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Background from "./components/Background";
 import Header from "./components/Header";
 import Section from "./components/Section";
+import Introduction from "./components/Introduction";
 import Grid from "./components/Grid";
 import GridItem from "./components/GridItem";
 import AboutItem from "./components/AboutItem";
@@ -21,7 +22,7 @@ import { portfolio } from "./data/data";
 const Main = () => {
   return (
     <Section>
-      <Hero />
+      <Introduction />
     </Section>
   );
 };
@@ -107,6 +108,7 @@ const App = () => (
       <main className="p-5 md:px-20 lg:px-30">
         <Header />
         <Container>
+          <Hero />
           <Routes>
             <Route path="/cyxdevlife" element={<Main />} />
             <Route path="/cyxdevlife/about" element={<About />} />

@@ -5,7 +5,7 @@ import { BsSun, BsFillMoonStarsFill } from "react-icons/bs";
 
 const navLinkStyles = ({ isActive }) =>
   `dark:text-white uppercase font-bold transition ${
-    isActive ? "text-teal-600" : ""
+    isActive ? "text-teal-600 dark:text-amber-300" : ""
   }`;
 
 function Header() {
@@ -35,7 +35,7 @@ function Header() {
           </li>
         </ul>
       </nav>
-      <nav className="p-2 md:p-5 mb-12 flex justify-between items-center rounded-m">
+      <nav className="p-2 md:p-5 flex justify-between items-center rounded-m">
         <ul className="flex space-x-4">
           <li>
             <NavLink to="/cyxdevlife" className={navLinkStyles} end>
