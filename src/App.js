@@ -1,5 +1,10 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
 // Import components
 import Background from "./components/Background";
 import Header from "./components/Header";
@@ -18,6 +23,33 @@ import { bioList } from "./data/data";
 import { about } from "./data/data";
 import { skill } from "./data/data";
 import { portfolio } from "./data/data";
+
+// 為每個頁面元件添加動畫
+const pageVariants = {
+  initial: { opacity: 0, y: 20 },
+  in: { opacity: 1, y: 0 },
+};
+
+const pageTransition = {
+  type: "tween",
+  ease: "anticipate",
+  duration: 0.7,
+};
+
+const AnimatedRoute = ({ children }) => {
+  const location = useLocation();
+  return (
+    <motion.div
+      key={location.pathname}
+      initial="initial"
+      animate="in"
+      variants={pageVariants}
+      transition={pageTransition}
+    >
+      {children}
+    </motion.div>
+  );
+};
 
 const Main = () => {
   return (
@@ -109,18 +141,54 @@ const App = () => (
         <Header />
         <Container>
           <Hero />
-          <Routes>
-            <Route path="/cyxdevlife" element={<Main />} />
-            <Route path="/cyxdevlife/about" element={<About />} />
-            <Route path="/cyxdevlife/bio" element={<Bio />} />
-            <Route path="/cyxdevlife/skill" element={<Skill />} />
-            <Route path="/cyxdevlife/portfolio" element={<Portfolio />} />
-          </Routes>
+          <AnimatePresence mode="wait">
+            <Routes>
+              <Route
+                path="/cyxdevlife"
+                element={
+                  <AnimatedRoute>
+                    <Main />
+                  </AnimatedRoute>
+                }
+              />
+              <Route
+                path="/cyxdevlife/about"
+                element={
+                  <AnimatedRoute>
+                    <About />
+                  </AnimatedRoute>
+                }
+              />
+              <Route
+                path="/cyxdevlife/bio"
+                element={
+                  <AnimatedRoute>
+                    <Bio />
+                  </AnimatedRoute>
+                }
+              />
+              <Route
+                path="/cyxdevlife/skill"
+                element={
+                  <AnimatedRoute>
+                    <Skill />
+                  </AnimatedRoute>
+                }
+              />
+              <Route
+                path="/cyxdevlife/portfolio"
+                element={
+                  <AnimatedRoute>
+                    <Portfolio />
+                  </AnimatedRoute>
+                }
+              />
+            </Routes>
+          </AnimatePresence>
         </Container>
         <Footer />
       </main>
     </Background>
   </Router>
 );
-
 export default App;
