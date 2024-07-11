@@ -16,69 +16,99 @@ import { about } from "./data/data";
 import { skill } from "./data/data";
 import { portfolio } from "./data/data";
 
+const Main = () => {
+  return (
+    <Section>
+      <Hero />
+    </Section>
+  );
+};
+
+const About = () => {
+  return (
+    <Section
+      custom="dark:bg-slate-800 dark:rounded-md dark:border dark:border-slate-700"
+      title="About"
+    >
+      {about.map((item, index) => (
+        <AboutItem key={index} title={item.title} content={item.content} />
+      ))}
+    </Section>
+  );
+};
+
+const Bio = () => {
+  return (
+    <Section
+      custom="dark:bg-slate-800 dark:rounded-md dark:border dark:border-slate-700"
+      title="Bio"
+    >
+      {bioList.map((bio) => (
+        <BioItem
+          key={bio.id}
+          title={bio.title}
+          company={bio.company}
+          description={bio.description}
+          time={bio.time}
+        />
+      ))}
+    </Section>
+  );
+};
+
+const Skill = () => {
+  return (
+    <Section
+      custom="dark:bg-slate-800 dark:rounded-md dark:border dark:border-slate-700"
+      title="Skill"
+    >
+      <Grid>
+        {skill.map((item, index) => (
+          <GridItem
+            key={index}
+            title={item.title}
+            list={item.list}
+            icon={item.icon}
+          />
+        ))}
+      </Grid>
+    </Section>
+  );
+};
+
+const Portfolio = () => {
+  return (
+    <Section
+      custom="dark:bg-slate-800 dark:rounded-md dark:border dark:border-slate-700"
+      title="Portfolio"
+    >
+      <Grid>
+        {portfolio.map((item, index) => (
+          <GridItem
+            key={index}
+            title={item.title}
+            link={item.link}
+            github={item.github}
+            list={item.list}
+            remark={item.remark}
+            imgSrc={item.imgSrc}
+          />
+        ))}
+      </Grid>
+    </Section>
+  );
+};
+
 const App = () => (
   <Background>
     <main className="p-5 md:px-20 lg:px-30">
       <Header />
       <Container>
-        <Section>
-          <Hero />
-        </Section>
-        <Section
-          custom="dark:bg-slate-800 dark:rounded-md dark:border dark:border-slate-700"
-          title="About"
-        >
-          {about.map((item, index) => (
-            <AboutItem key={index} title={item.title} content={item.content} />
-          ))}
-        </Section>
-        <Section
-          custom="dark:bg-slate-800 dark:rounded-md dark:border dark:border-slate-700"
-          title="Bio"
-        >
-          {bioList.map((bio) => (
-            <BioItem
-              key={bio.id}
-              title={bio.title}
-              company={bio.company}
-              description={bio.description}
-              time={bio.time}
-            />
-          ))}
-        </Section>
-        <Section
-          custom="dark:bg-slate-800 dark:rounded-md dark:border dark:border-slate-700"
-          title="Skill"
-        >
-          <Grid>
-            {skill.map((item, index) => (
-              <GridItem
-                key={index}
-                title={item.title}
-                list={item.list}
-                icon={item.icon}
-              />
-            ))}
-          </Grid>
-        </Section>
-        <Section
-          custom="dark:bg-slate-800 dark:rounded-md dark:border dark:border-slate-700"
-          title="Portfolio"
-        >
-          <Grid>
-            {portfolio.map((item, index) => (
-              <GridItem
-                key={index}
-                title={item.title}
-                link={item.link}
-                github={item.github}
-                list={item.list}
-                remark={item.remark}
-                imgSrc={item.imgSrc}
-              />
-            ))}
-          </Grid>
-        </Section>
+        <Main />
+        <About />
+        <Bio />
+        <Skill />
+        <Portfolio />
       </Container>
       <Footer />
     </main>
