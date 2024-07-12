@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { ThemeContext } from "../context/ThemeProvider";
 import { BsSun, BsFillMoonStarsFill } from "react-icons/bs";
 
@@ -11,6 +11,10 @@ const navLinkStyles = ({ isActive }) =>
 function Header() {
   const { theme, toggleTheme } = useContext(ThemeContext);
   const darkMode = theme === "dark";
+  const location = useLocation();
+  const isHomeActive =
+    location.pathname === "/cyxdevlife" || location.pathname === "/cyxdevlife/";
+
   return (
     <header className="max-w-3xl mx-auto">
       <nav className="p-2 md:p-5 mb-4 flex justify-between items-center rounded-m">
@@ -38,7 +42,14 @@ function Header() {
       <nav className="p-2 md:p-5 flex justify-between items-center rounded-m">
         <ul className="flex space-x-4">
           <li>
-            <NavLink to="/cyxdevlife" className={navLinkStyles} end>
+            <NavLink
+              to="/cyxdevlife"
+              className={`${navLinkStyles} ${
+                isHomeActive
+                  ? "text-teal-600 dark:text-amber-300"
+                  : "dark:text-white"
+              }`}
+            >
               Home
             </NavLink>
           </li>
