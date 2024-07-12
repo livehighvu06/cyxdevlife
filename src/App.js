@@ -1,138 +1,18 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+
 // Import components
 import Background from "./components/Background";
 import Header from "./components/Header";
-import Section from "./components/Section";
-import Introduction from "./components/Introduction";
-import Grid from "./components/Grid";
-import GridItem from "./components/GridItem";
-import AboutItem from "./components/AboutItem";
-import BioItem from "./components/BioItem";
 import Container from "./components/Container";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
-
-// Import bio list data
-import { bioList } from "./data/data";
-import { about } from "./data/data";
-import { skill } from "./data/data";
-import { portfolio } from "./data/data";
-
-// 為每個頁面元件添加動畫
-const pageVariants = {
-  initial: { opacity: 0, y: 20 },
-  in: { opacity: 1, y: 0 },
-};
-
-const pageTransition = {
-  type: "tween",
-  ease: "anticipate",
-  duration: 0.7,
-};
-
-const AnimatedRoute = ({ children }) => {
-  const location = useLocation();
-  return (
-    <motion.div
-      key={location.pathname}
-      initial="initial"
-      animate="in"
-      variants={pageVariants}
-      transition={pageTransition}
-    >
-      {children}
-    </motion.div>
-  );
-};
-
-const Main = () => {
-  return (
-    <Section>
-      <Introduction />
-    </Section>
-  );
-};
-
-const About = () => {
-  return (
-    <Section
-      custom="dark:bg-slate-800 dark:rounded-md dark:border dark:border-slate-700"
-      title="About"
-    >
-      {about.map((item, index) => (
-        <AboutItem key={index} title={item.title} content={item.content} />
-      ))}
-    </Section>
-  );
-};
-
-const Bio = () => {
-  return (
-    <Section
-      custom="dark:bg-slate-800 dark:rounded-md dark:border dark:border-slate-700"
-      title="Bio"
-    >
-      {bioList.map((bio) => (
-        <BioItem
-          key={bio.id}
-          title={bio.title}
-          company={bio.company}
-          description={bio.description}
-          time={bio.time}
-        />
-      ))}
-    </Section>
-  );
-};
-
-const Skill = () => {
-  return (
-    <Section
-      custom="dark:bg-slate-800 dark:rounded-md dark:border dark:border-slate-700"
-      title="Skill"
-    >
-      <Grid>
-        {skill.map((item, index) => (
-          <GridItem
-            key={index}
-            title={item.title}
-            list={item.list}
-            icon={item.icon}
-          />
-        ))}
-      </Grid>
-    </Section>
-  );
-};
-
-const Portfolio = () => {
-  return (
-    <Section
-      custom="dark:bg-slate-800 dark:rounded-md dark:border dark:border-slate-700"
-      title="Portfolio"
-    >
-      <Grid>
-        {portfolio.map((item, index) => (
-          <GridItem
-            key={index}
-            title={item.title}
-            link={item.link}
-            github={item.github}
-            list={item.list}
-            remark={item.remark}
-            imgSrc={item.imgSrc}
-          />
-        ))}
-      </Grid>
-    </Section>
-  );
-};
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Bio from "./pages/Bio";
+import Skill from "./pages/Skill";
+import Portfolio from "./pages/Portfolio";
+import AnimatedRoute from "./components/animations/AnimatedRoute";
 
 const App = () => (
   <Router>
@@ -147,7 +27,7 @@ const App = () => (
                 path="/cyxdevlife"
                 element={
                   <AnimatedRoute>
-                    <Main />
+                    <Home />
                   </AnimatedRoute>
                 }
               />
