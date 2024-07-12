@@ -21,11 +21,13 @@ function GridItemTitle({ title }) {
 function GridItemList({ list }) {
   return (
     <div className="flex-1">
-      <ul className="flex flex-wrap gap-2">
+      <ul className="flex items-start flex-wrap md:gap-2">
         {list.map((item, index) => (
           <li
             key={index}
-            className="text-sm text-left text-gray-800 bg-gray-200 rounded-md px-2 py-1"
+            className={`text-sm text-left flex-none ${
+              index !== list.length - 1 && "mb-2 mr-2"
+            } md:m-0 text-gray-800 bg-gray-200 rounded-md px-2 py-1`}
           >
             {item}
           </li>
@@ -54,7 +56,7 @@ function GridItemLinks({ link, github, remark }) {
         </div>
       )}
       {remark && (
-        <span className="text-sm bg-teal-600 text-white py-1 px-2 rounded-md font-bold">
+        <span className="text-sm bg-teal-600 text-white ml-auto py-1 px-2 rounded-md font-bold">
           {remark}
         </span>
       )}
