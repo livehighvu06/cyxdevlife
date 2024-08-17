@@ -16,7 +16,7 @@ function Header() {
     location.pathname === "/cyxdevlife" || location.pathname === "/cyxdevlife/";
 
   return (
-    <header className="max-w-3xl mx-auto">
+    <header className="max-w-3xl mx-auto w-full">
       <nav className="p-2 md:p-5 mb-4 flex justify-between items-center rounded-m">
         <h1 className="text-xl font-bold dark:text-white">Chen Yi Xian</h1>
         <ul className="flex items-center gap-5">
