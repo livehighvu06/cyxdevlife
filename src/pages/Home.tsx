@@ -2,9 +2,9 @@ import React from "react";
 import Section from "../components/Section";
 import Introduction from "../components/Introduction";
 
-const Home = () => {
+const Home: React.FC = () => {
   return (
-    <Section>
+    <Section title="">
       <Introduction />
     </Section>
   );

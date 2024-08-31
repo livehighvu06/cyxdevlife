@@ -1,12 +1,12 @@
 import React, { createContext, useState, useEffect } from "react";
-export const ThemeContext = createContext();
+export const ThemeContext = createContext<{ theme: string, setTheme: React.Dispatch<React.SetStateAction<string>>, toggleTheme: () => void }>({ theme: "light", setTheme: () => {}, toggleTheme: () => {} });
 
 const getInitialTheme = () => {
   const storedTheme = window.localStorage.getItem("theme");
   return storedTheme ? storedTheme : "light";
 };
 
-function ThemeProvider({ children }) {
+function ThemeProvider({ children }: { children: React.ReactNode }): JSX.Element {
   const [theme, setTheme] = useState(getInitialTheme);
 
   const toggleTheme = () => {

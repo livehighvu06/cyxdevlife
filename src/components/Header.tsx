@@ -3,12 +3,12 @@ import { NavLink, useLocation } from "react-router-dom";
 import { ThemeContext } from "../context/ThemeProvider";
 import { BsSun, BsFillMoonStarsFill } from "react-icons/bs";
 
-const navLinkStyles = ({ isActive }) =>
+const navLinkStyles = ({ isActive }: { isActive: boolean }): string =>
   `dark:text-white uppercase font-bold transition ${
     isActive ? "text-teal-600 dark:text-amber-300" : ""
   }`;
 
-function Header() {
+function Header(): JSX.Element {
   const { theme, toggleTheme } = useContext(ThemeContext);
   const darkMode = theme === "dark";
   const location = useLocation();
