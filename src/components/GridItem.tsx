@@ -2,12 +2,12 @@ import React from "react";
 import { AiOutlineLink, AiOutlineGithub } from "react-icons/ai";
 
 // 圖片顯示組件
-function GridItemImage({ src }) {
+function GridItemImage({ src }: { src: string }): JSX.Element {
   return <img src={src} alt="" className="rounded-lg mb-4" />;
 }
 
 // 標題顯示組件
-function GridItemTitle({ title }) {
+function GridItemTitle({ title }: { title: string | string[] }): JSX.Element {
   return (
     <h4 className="text-xl font-bold mb-4">
       {Array.isArray(title)
@@ -18,7 +18,7 @@ function GridItemTitle({ title }) {
 }
 
 // 技能列表顯示組件
-function GridItemList({ list }) {
+function GridItemList({ list }: { list: string[] }): JSX.Element {
   return (
     <div className="flex-1">
       <ul className="flex items-start flex-wrap md:gap-2">
@@ -38,7 +38,7 @@ function GridItemList({ list }) {
 }
 
 // 連結顯示組件
-function GridItemLinks({ link, github, remark }) {
+function GridItemLinks({ link, github, remark }: { link?: string, github?: string, remark?: string }): JSX.Element {
   return (
     <div className="flex border-0 border-t-2 pt-4 mt-4 w-full">
       {link && (
@@ -66,18 +66,25 @@ function GridItemLinks({ link, github, remark }) {
 
 // 主組件
 function GridItem({
-  children,
   imgSrc,
   list,
   title,
   link,
   github,
   remark,
-  icon: Icon,
-}) {
+  Icon,
+}: {
+  imgSrc?: string;
+  list: string[];
+  title: string | string[];
+  link?: string;
+  github?: string;
+  remark?: string;
+  Icon?: React.ElementType | null;
+}): JSX.Element {
   return (
     <div className="text-center shadow-lg px-5 py-10 md:p-8 rounded-lg mb-10 md:mb-0 bg-slate-50">
-      {/* {Icon && <Icon className="text-5xl mb-4 mx-auto" />} */}
+      {Icon && <Icon className="text-5xl mb-4 mx-auto" />}
       <div className="flex flex-col h-full">
         <GridItemTitle title={title} />
         {imgSrc && <GridItemImage src={imgSrc} />}

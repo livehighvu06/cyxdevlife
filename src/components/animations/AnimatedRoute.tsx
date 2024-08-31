@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { pageVariants, pageTransition } from "../../animations/animations";
 
-const AnimatedRoute = ({ children }) => {
+const AnimatedRoute = ({ children }: { children: React.ReactNode }): JSX.Element => {
   const location = useLocation();
   return (
     <motion.div

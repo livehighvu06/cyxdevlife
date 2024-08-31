@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const LoadingSpinner = () => (
+const LoadingSpinner = (): JSX.Element => (
   <motion.div
     style={{
       display: "flex",
