@@ -1,6 +1,6 @@
 import React from "react";
 
-function Section({ children, title, custom }) {
+function Section({ children, title, custom }: { children: React.ReactNode, title: string, custom?: string }): JSX.Element {
   return (
     <section className={`p-6 md:p-8 mb-12 md:mb-16 ${custom || ""}`}>
       {title && (

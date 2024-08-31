@@ -5,7 +5,7 @@ import {
   AiFillGithub,
   AiFillCodeSandboxCircle,
 } from "react-icons/ai";
-function Introduction() {
+function Introduction(): JSX.Element {
   return (
     <div className="dark:text-white">
       <div className="text-center  mx-auto">

@@ -13,7 +13,13 @@ import web9 from "../images/web9.png";
 import { BsCodeSlash } from "react-icons/bs";
 import { AiFillLayout } from "react-icons/ai";
 
-export const bioList = [
+export const bioList: {
+  id: number;
+  title: string;
+  company: string;
+  description: string[];
+  time: string;
+}[] = [
   {
     id: 1,
     title: "前端工程師",
@@ -39,7 +45,10 @@ export const bioList = [
   },
 ];
 
-export const about = [
+export const about: {
+  title: string;
+  content: string;
+}[] = [
   {
     title: "動機",
     content:
@@ -52,7 +61,11 @@ export const about = [
   },
 ];
 
-export const skill = [
+export const skill: {
+  title: string;
+  list: string[];
+  icon: React.ElementType | null;
+}[] = [
   {
     title: "Web Layout",
     list: [
@@ -101,7 +114,14 @@ export const skill = [
   },
 ];
 
-export const portfolio = [
+export const portfolio: {
+  title: string;
+  link: string;
+  github: string;
+  list: string[];
+  remark: string;
+  imgSrc: string | null;
+}[] = [
   {
     title: "Weather App 簡潔文字版",
     link: "https://livehighvu06.github.io/weather-app/",
@@ -112,6 +132,7 @@ export const portfolio = [
   },
   {
     title: "HOYOLAB自動簽到腳本",
+    link:"",
     github: "https://github.com/livehighvu06/hoyolab_autosignin",
     list: ["JavaScript", "Google Apps Script"],
     remark: "小工具",
@@ -120,6 +141,7 @@ export const portfolio = [
   {
     title: "官方網站",
     link: "https://www.riseofelves.com/zh-TW",
+    github: "",
     list: ["Next.js", "Tailwind CSS", "Zustand", "ether.js"],
     remark: "公司專案",
     imgSrc: web9,
@@ -164,28 +186,32 @@ export const portfolio = [
   },
   {
     title: "ゲーミングキーボード特集",
-    link: "https://www.rakuten.ne.jp/gold/princeton/gamingkeyboard/",
+    link: "",
+    github: "",
     list: ["純手刻RWD Layout", "SVG動畫效果"],
     remark: "公司專案",
     imgSrc: web1,
   },
   {
     title: "スピーカー 特集",
-    link: "https://www.rakuten.ne.jp/gold/princeton/speaker/",
+    link: "",
+    github: "",
     list: ["純手刻RWD Layout", "CSS動畫效果", "JavaScript手刻Scroll效果"],
     remark: "公司專案",
     imgSrc: web2,
   },
   {
     title: "SDカード 特集",
-    link: "https://www.rakuten.ne.jp/gold/princeton/sdcard/",
+    link: "",
+    github: "",
     list: ["純手刻RWD Layout"],
     remark: "公司專案",
     imgSrc: web3,
   },
   {
     title: "iphone 特集",
-    link: "https://www.rakuten.ne.jp/gold/princeton/iPhone14SeriesCase/",
+    link: "",
+    github: "",
     list: ["純手刻RWD Layout"],
     remark: "公司專案",
     imgSrc: web4,
