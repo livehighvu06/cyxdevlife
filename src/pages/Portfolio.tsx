@@ -4,15 +4,7 @@ import Grid from "../components/Grid";
 import GridItem from "../components/GridItem";
 
 import { portfolio } from "../data/data";
-
-interface PortfolioItem {
-  title: string;
-  link?: string ;
-  github?: string ;
-  list: string[];
-  remark: string;
-  imgSrc: string | null;
-}
+import { PortfolioItemType } from "../types";
 
 const Portfolio: React.FC = () => {
   return (
@@ -21,7 +13,7 @@ const Portfolio: React.FC = () => {
       title="Portfolio"
     >
       <Grid>
-        {portfolio.map((item: PortfolioItem, index: number) => (
+        {portfolio.map((item: PortfolioItemType, index: number) => (
           <GridItem
             key={index}
             title={item.title}

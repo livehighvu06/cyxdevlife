@@ -4,12 +4,8 @@ import Grid from "../components/Grid";
 import GridItem from "../components/GridItem";
 
 import { skill } from "../data/data";
+import { SkillItemType } from "../types";
 
-interface SkillItem {
-  title: string;
-  list: string[];
-  icon: React.ElementType | null;
-}
 const Skill: React.FC = () => {
   return (
     <Section
@@ -17,7 +13,7 @@ const Skill: React.FC = () => {
       title="Skill"
     >
       <Grid>
-        {skill.map((item: SkillItem, index: number) => (
+        {skill.map((item: SkillItemType, index: number) => (
           <GridItem
             key={index}
             title={item.title}

@@ -3,14 +3,7 @@ import Section from "../components/Section";
 import BioItem from "../components/BioItem";
 
 import { bioList } from "../data/data";
-
-export interface BioItemType {
-  id: string | number;
-  title: string;
-  company: string;
-  description: string[];
-  time: string;
-}
+import { BioItemType } from "../types";
 
 const Bio: React.FC = () => {
   return (
