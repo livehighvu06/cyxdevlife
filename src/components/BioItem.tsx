@@ -1,6 +1,7 @@
 import React from "react";
+import { BioItemProps } from "../types/components/";
 
-function WKX({ title, company, description, time }: { title: string, company: string, description: string[], time: string }): JSX.Element {
+function WKX({ title, company, description, time }: BioItemProps): JSX.Element {
   return (
     <dl className="md:flex gap-5 dark:text-white mb-20">
       <dt className="tracking-wide font-bold whitespace-nowrap mb-4 md:mr-6 md:mb-0 ">

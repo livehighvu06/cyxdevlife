@@ -1,6 +1,6 @@
 import React from "react";
 import { AiOutlineLink, AiOutlineGithub } from "react-icons/ai";
-
+import { GridItemProps } from "../types/components/";
 // 圖片顯示組件
 function GridItemImage({ src }: { src: string }): JSX.Element {
   return <img src={src} alt="" className="rounded-lg mb-4" />;
@@ -73,15 +73,7 @@ function GridItem({
   github,
   remark,
   Icon,
-}: {
-  imgSrc?: string;
-  list: string[];
-  title: string | string[];
-  link?: string;
-  github?: string;
-  remark?: string;
-  Icon?: React.ElementType | null;
-}): JSX.Element {
+}: GridItemProps): JSX.Element {
   return (
     <div className="text-center shadow-lg px-5 py-10 md:p-8 rounded-lg mb-10 md:mb-0 bg-slate-50">
       {Icon && <Icon className="text-5xl mb-4 mx-auto" />}

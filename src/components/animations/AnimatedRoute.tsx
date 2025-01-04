@@ -2,8 +2,9 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { pageVariants, pageTransition } from "../../animations/animations";
+import { AnimatedRouteProps } from "../../types/components";  
 
-const AnimatedRoute = ({ children }: { children: React.ReactNode }): JSX.Element => {
+const AnimatedRoute = ({ children }: AnimatedRouteProps): JSX.Element => {
   const location = useLocation();
   return (
     <motion.div

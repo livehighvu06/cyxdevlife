@@ -1,10 +1,5 @@
 import React from "react";
-
-export interface AboutItemProps {
-  index: number;
-  title: string;
-  content: string;
-}
+import { AboutItemProps } from "../types/components";
 
 export default function AboutItem({ index, title, content }: AboutItemProps): JSX.Element {
   return (
