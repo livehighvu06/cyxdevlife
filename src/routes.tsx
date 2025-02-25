@@ -1,4 +1,4 @@
-import React, { lazy, ReactNode } from "react";
+import React, { lazy } from "react";
 
 // Lazy load page components
 const Home = lazy(() => import("./pages/Home"));
