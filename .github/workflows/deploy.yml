@@ -1,30 +1,23 @@
 name: Deploy to GitHub Pages
 
-# 觸發條件：當對 main 分支推送或建立 pull request 時執行
 on:
   push:
     branches:
       - main
 
-# 工作流程的作業
 jobs:
   deploy:
-    # 運行環境：使用最新的 Ubuntu
     runs-on: ubuntu-latest
 
-    # 執行步驟
     steps:
-      # 1. 從儲存庫中檢查出程式碼
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # 2. 設置 Node.js 環境
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "18" # 與你的 package.json 相容，建議使用 lts 版本
+          node-version: "18"
 
-      # 3. 快取 npm 依賴，加速建置
       - name: Cache dependencies
         uses: actions/cache@v3
         with:
@@ -33,22 +26,20 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      # 4. 安裝依賴
       - name: Install dependencies
-        run: npm ci # 使用 npm ci 確保依賴確定性安裝
+        run: npm ci
 
-      # 5. 建置應用程式
       - name: Build
         run: npm run build
 
-      #6. 僅用於 Actions
       - name: Configure Git
         run: |
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
 
-      # 7. 部署到 GitHub Pages
-      - name: Deploy
-        run: npm run deploy
+      - name: Deploy to GitHub Pages
+        run: |
+          git remote set-url origin https://${GH_TOKEN}@github.com/livehighvu06/cyxdevlife.git
+          npm run deploy
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }} # 使用 GitHub 秘密變數
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
