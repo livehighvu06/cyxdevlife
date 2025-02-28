@@ -117,11 +117,18 @@ export const skill: {
 export const portfolio: {
   title: string;
   link: string;
-  github: string;
+  github?: string;
   list: string[];
   remark: string;
   imgSrc: string | null;
 }[] = [
+  {
+    title: "Remove Instagram Share ID",
+    link: "https://routinehub.co/shortcut/21644/",
+    list: ["iOS Shortcut"],
+    remark: "小工具",
+    imgSrc: null,
+  },
   {
     title: "Weather App 簡潔文字版",
     link: "https://livehighvu06.github.io/weather-app/",
@@ -132,7 +139,7 @@ export const portfolio: {
   },
   {
     title: "HOYOLAB自動簽到腳本",
-    link:"",
+    link: "",
     github: "https://github.com/livehighvu06/hoyolab_autosignin",
     list: ["JavaScript", "Google Apps Script"],
     remark: "小工具",
