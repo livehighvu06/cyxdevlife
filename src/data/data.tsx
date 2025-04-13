@@ -123,6 +123,13 @@ export const portfolio: {
   imgSrc: string | null;
 }[] = [
   {
+    title: "巴哈姆特自動簽到腳本",
+    link: "https://github.com/livehighvu06/bahamut_autosignin",
+    list: ["JavaScript", "Google Apps Script", "Line Message API"],
+    remark: "小工具",
+    imgSrc: null,
+  },
+  {
     title: "Remove Instagram Share ID",
     link: "https://routinehub.co/shortcut/21644/",
     list: ["iOS Shortcut"],
