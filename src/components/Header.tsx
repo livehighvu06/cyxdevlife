@@ -20,7 +20,7 @@ function Header(): JSX.Element {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClickOutside = (event: TouchEvent) => {
       if (
         isOpen &&
         menuRef.current &&
@@ -32,9 +32,10 @@ function Header(): JSX.Element {
       }
     };
 
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
+    
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
     };
   }, [isOpen]);
 
