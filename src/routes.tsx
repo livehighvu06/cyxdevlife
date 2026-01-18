@@ -13,9 +13,9 @@ export interface RouteType {
 }
 
 export const routes: RouteType[] = [
-  { path: "/cyxdevlife", element: Home },
-  { path: "/cyxdevlife/about", element: About },
-  { path: "/cyxdevlife/bio", element: Bio },
-  { path: "/cyxdevlife/skill", element: Skill },
-  { path: "/cyxdevlife/portfolio", element: Portfolio },
+  { path: "/", element: Home },
+  { path: "/about", element: About },
+  { path: "/bio", element: Bio },
+  { path: "/skill", element: Skill },
+  { path: "/portfolio", element: Portfolio },
 ];

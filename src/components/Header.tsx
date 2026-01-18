@@ -60,7 +60,7 @@ function Header(): JSX.Element {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-1">
           {menuItems.map((item) => {
-             const path = item === "Home" ? "/cyxdevlife" : `/cyxdevlife/${item.toLowerCase()}`;
+             const path = item === "Home" ? "/" : `/${item.toLowerCase()}`;
              return (
                <NavLink
                  key={item}
@@ -122,7 +122,7 @@ function Header(): JSX.Element {
           >
              <nav className="flex flex-col space-y-2">
               {menuItems.map((item) => {
-                const path = item === "Home" ? "/cyxdevlife" : `/cyxdevlife/${item.toLowerCase()}`;
+                const path = item === "Home" ? "/" : `/${item.toLowerCase()}`;
                 return (
                   <motion.div key={item} variants={itemVariants}>
                      <NavLink
