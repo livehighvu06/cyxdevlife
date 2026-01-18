@@ -6,9 +6,7 @@ import { routes,RouteType } from "./routes";
 // Import components
 import Background from "./components/Background";
 import Header from "./components/Header";
-import Container from "./components/Container";
 import Footer from "./components/Footer";
-import Hero from "./components/Hero";
 import AnimatedRoute from "./components/animations/AnimatedRoute";
 import LoadingSpinner from "./components/animations/LoadingSpinner";
 
