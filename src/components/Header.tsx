@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { ThemeContext } from "../context/ThemeProvider";
 import { BsSun, BsFillMoonStarsFill } from "react-icons/bs";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
