@@ -11,7 +11,7 @@ import AnimatedRoute from "./components/animations/AnimatedRoute";
 import LoadingSpinner from "./components/animations/LoadingSpinner";
 
 const App: React.FC = () => (
-  <Router>
+  <Router basename="/cyxdevlife">
     <Background>
       <Header />
       <main className="flex-1 w-full pb-20">
