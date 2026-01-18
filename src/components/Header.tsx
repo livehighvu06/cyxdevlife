@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { ThemeContext } from "../context/ThemeProvider";
 import { BsSun, BsFillMoonStarsFill } from "react-icons/bs";
@@ -14,8 +14,29 @@ function Header(): JSX.Element {
   const { theme, toggleTheme } = useContext(ThemeContext);
   const darkMode = theme === "dark";
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
 
   const toggleMenu = () => setIsOpen(!isOpen);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        isOpen &&
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
 
   const menuVariants = {
     closed: {
@@ -89,6 +110,7 @@ function Header(): JSX.Element {
         <div className="flex items-center gap-4">
            {/* Mobile Menu Toggle */}
           <button 
+            ref={buttonRef}
             onClick={toggleMenu} 
             className="md:hidden p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/10 transition-colors"
             aria-label="Toggle Menu"
@@ -118,6 +140,7 @@ function Header(): JSX.Element {
             animate="open"
             exit="closed"
             variants={menuVariants}
+            ref={menuRef}
             className="absolute top-full left-4 right-4 mt-2 p-4 rounded-2xl bg-white/95 dark:bg-dark-light/95 backdrop-blur-xl border border-white/20 dark:border-white/10 shadow-2xl md:hidden overflow-hidden"
           >
              <nav className="flex flex-col space-y-2">
