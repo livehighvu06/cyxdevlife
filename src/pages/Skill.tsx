@@ -9,7 +9,7 @@ import { SkillItemType } from "../types";
 const Skill: React.FC = () => {
   return (
     <Section
-      custom="dark:bg-slate-800 dark:rounded-md dark:border dark:border-slate-700"
+
       title="Skill"
     >
       <Grid>

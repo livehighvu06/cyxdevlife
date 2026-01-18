@@ -8,7 +8,7 @@ import { BioItemType } from "../types";
 const Bio: React.FC = () => {
   return (
     <Section
-      custom="dark:bg-slate-800 dark:rounded-md dark:border dark:border-slate-700"
+
       title="Bio"
     >
       {bioList.map((bio: BioItemType) => (
