@@ -5,59 +5,72 @@ import {
   AiFillGithub,
   AiFillCodeSandboxCircle,
 } from "react-icons/ai";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.3,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { type: "spring", stiffness: 100 },
+  },
+};
+
 function Introduction(): JSX.Element {
   return (
-    <div className="dark:text-white">
-      <div className="text-center  mx-auto">
-        <h2 className="text-4xl md:text-6xl py-2 text-teal-600 font-bold">
-          Eddie Chen
-        </h2>
-        <h3 className="text-2xl md:text-3xl py-2">
-          Hello, I'm an Front-End Engineer based in Taiwan!
-        </h3>
-        <p className="py-2 mb-6 leading-8 text-gray-800 dark:text-white">
-          我是陳義賢，學生時期很喜歡玩無名小站
-          <br />
-          常常會自己動手改樣式
-          <span className=" line-through">(搞破壞)</span>
-          ，看到網站變成與眾不同的樣子很有成就感
-        </p>
-      </div>
-      <div className="text-5xl flex justify-center gap-10 py-3">
-        <a
-          href="https://codepen.io/livehighvu06"
-          target="_blank"
-          rel="noreferrer"
-          title="Codepen"
-        >
-          <AiFillCodepenCircle />
-        </a>
-        <a
-          href="https://github.com/livehighvu06"
-          target="_blank"
-          rel="noreferrer"
-          title="Github"
-        >
-          <AiFillGithub />
-        </a>
-        <a
-          href="https://codesandbox.io/u/livehighvu06"
-          target="_blank"
-          rel="noreferrer"
-          title="CodeSandbox"
-        >
-          <AiFillCodeSandboxCircle />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/chenyixian/"
-          target="_blank"
-          rel="noreferrer"
-          title="Linkedin"
-        >
-          <AiFillLinkedin />
-        </a>
-      </div>
-    </div>
+    <motion.div 
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      className="flex flex-col justify-center text-left"
+    >
+      <motion.p variants={itemVariants} className="text-teal font-medium tracking-wider uppercase mb-2">
+        Front-End Engineer
+      </motion.p>
+      
+      <motion.h2 variants={itemVariants} className="text-5xl md:text-7xl font-bold mb-4 text-gray-900 dark:text-gray-100 font-sans tracking-tight">
+        Eddie Chen
+      </motion.h2>
+      
+      <motion.h3 variants={itemVariants} className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-8 font-light">
+        Coding with passion, designing with soul.
+      </motion.h3>
+      
+      <motion.p variants={itemVariants} className="text-gray-600 dark:text-gray-300 leading-relaxed max-w-lg mb-10 text-lg">
+        我是陳義賢，一名熱愛創造獨特網頁體驗的前端工程師。
+        喜歡探索新技術，將設計靈感轉化為流暢的互動介面。
+      </motion.p>
+
+      <motion.div variants={itemVariants} className="flex gap-6 text-3xl text-gray-400">
+        {[
+          { icon: AiFillGithub, href: "https://github.com/livehighvu06" },
+          { icon: AiFillLinkedin, href: "https://www.linkedin.com/in/chenyixian/" },
+          { icon: AiFillCodepenCircle, href: "https://codepen.io/livehighvu06" },
+          { icon: AiFillCodeSandboxCircle, href: "https://codesandbox.io/u/livehighvu06" },
+        ].map((social, index) => (
+          <a
+            key={index}
+            href={social.href}
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-teal dark:hover:text-teal-light transition-colors transform hover:-translate-y-1 duration-300"
+          >
+            <social.icon />
+          </a>
+        ))}
+      </motion.div>
+    </motion.div>
   );
 }
 

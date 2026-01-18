@@ -15,26 +15,23 @@ import LoadingSpinner from "./components/animations/LoadingSpinner";
 const App: React.FC = () => (
   <Router>
     <Background>
-      <main className="flex flex-col min-h-screen p-5 md:px-20 lg:px-30">
-        <Header />
-        <Container>
-          <Hero />
-          <AnimatePresence mode="wait">
-            <Suspense fallback={<LoadingSpinner />}>
-              <Routes>
-                {routes.map((route:RouteType) => (
-                  <Route
-                    key={route.path}
-                    path={route.path}
-                    element={<AnimatedRoute>{<route.element />}</AnimatedRoute>}
-                  />
-                ))}
-              </Routes>
-            </Suspense>
-          </AnimatePresence>
-        </Container>
-        <Footer />
+      <Header />
+      <main className="flex-1 w-full pb-20">
+        <AnimatePresence mode="wait">
+          <Suspense fallback={<LoadingSpinner />}>
+            <Routes>
+              {routes.map((route:RouteType) => (
+                <Route
+                  key={route.path}
+                  path={route.path}
+                  element={<AnimatedRoute>{<route.element />}</AnimatedRoute>}
+                />
+              ))}
+            </Routes>
+          </Suspense>
+        </AnimatePresence>
       </main>
+      <Footer />
     </Background>
   </Router>
 );
