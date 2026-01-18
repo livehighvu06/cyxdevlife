@@ -8,7 +8,7 @@ import { AboutItemType } from "../types";
 const About: React.FC = () => {
   return (
     <Section
-      custom="dark:bg-slate-800 dark:rounded-md dark:border dark:border-slate-700"
+
       title="About"
     >
       {about.map((item: AboutItemType, index: number) => (
